@@ -1,0 +1,84 @@
+/* Configurações gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Caixa de erro */
+.error-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: pulse 2s infinite;
+}
+
+.error-box h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ff4f4f;
+  text-shadow: 0 0 8px #ff4f4f;
+}
+
+.error-box p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.dev-name {
+  font-weight: bold;
+  color: #00d1b2;
+}
+
+/* Botão */
+#reload-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00d1b2;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#reload-btn:hover {
+  background-color: #00b89b;
+  transform: scale(1.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
